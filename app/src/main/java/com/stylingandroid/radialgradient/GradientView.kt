@@ -2,7 +2,6 @@ package com.stylingandroid.radialgradient
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RadialGradient
 import android.graphics.RectF
@@ -35,7 +34,7 @@ class GradientView @JvmOverloads constructor(
                 viewHeight / 2f,
                 Math.min(viewWidth, viewHeight) / 2f,
                 defaultColour,
-                Color.TRANSPARENT,
+                defaultColour.setAlpha(0),
                 Shader.TileMode.CLAMP
         )
     }
