@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.stylingandroid.radialgradient.MainActivity">
+
+  <View
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@android:color/black"
+    app:layout_constraintBottom_toBottomOf="@+id/dark_hardware"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.stylingandroid.radialgradient.GradientView
+    android:id="@+id/dark_hardware"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="8dp"
+    android:layerType="hardware"
+    app:layout_constraintBottom_toTopOf="@+id/light_hardware"
+    app:layout_constraintEnd_toStartOf="@+id/dark_software"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.stylingandroid.radialgradient.GradientView
+    android:id="@+id/dark_software"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="8dp"
+    android:layerType="software"
+    app:layout_constraintBottom_toTopOf="@+id/light_software"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/dark_hardware"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.stylingandroid.radialgradient.GradientView
+    android:id="@+id/light_hardware"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="8dp"
+    android:layerType="hardware"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/light_software"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/dark_hardware" />
+
+  <com.stylingandroid.radialgradient.GradientView
+    android:id="@+id/light_software"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="8dp"
+    android:layerType="software"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/light_hardware"
+    app:layout_constraintTop_toBottomOf="@+id/dark_software" />
+
+</android.support.constraint.ConstraintLayout>
