@@ -22,12 +22,11 @@ class GradientView @JvmOverloads constructor(
         context.theme.getColour(R.attr.colorAccent)
     }
 
-    private val paint: Paint by lazyFast {
+    private val paint: Paint =
         Paint().apply {
             isAntiAlias = true
             style = Paint.Style.FILL
         }
-    }
 
     var shaderFactory: (width: Float, height: Float) -> Shader = { viewWidth, viewHeight ->
         RadialGradient(
