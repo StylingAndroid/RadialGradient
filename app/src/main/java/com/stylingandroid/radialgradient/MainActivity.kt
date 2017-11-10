@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val colours: IntArray by lazyFast {
-        listOf(defaultColour,
+        arrayOf(defaultColour,
                 defaultColour.setAlpha(0xA7),
                 defaultColour.setAlpha(0x60),
                 defaultColour.setAlpha(0x34),
